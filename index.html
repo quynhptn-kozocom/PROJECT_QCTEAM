@@ -1,29 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exercise 4 - Login Test</title>
+
   <style>
-    body { font-family: Arial, sans-serif; max-width: 400px; margin: 50px auto; }
-    input, button { display: block; width: 100%; margin: 10px 0; padding: 8px; }
-    .message { padding: 10px; border-radius: 5px; }
-    .success { background: #d4edda; color: #155724; }
-    .error { background: #f8d7da; color: #721c24; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h2 {
+      text-align: left;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    #loginBtn {
+      background-color: #28a745; 
+    }
+
+    #loginBtn:hover {
+      background-color: #218838;
+    }
+
+    #runTests,
+    #clearForm {
+      background-color: #007bff; 
+    }
+
+    #runTests:hover,
+    #clearForm:hover {
+      background-color: #0069d9;
+    }
+
+
+    .field-error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 4px;
+    }
+
+    .message {
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+ 
+    .test-controls {
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .test-controls h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
+
 <body>
   <h2>Login Form</h2>
 
-  <input id="username" type="text" placeholder="Username">
-  <input id="password" type="password" placeholder="Password">
+
+  <label for="username">Username:</label>
+  <input id="username" type="text" placeholder="Enter username" />
+  <div id="usernameError" class="field-error"></div>
+
+
+  <label for="password">Password:</label>
+  <input id="password" type="password" placeholder="Enter password" />
+  <div id="passwordError" class="field-error"></div>
+
+ 
   <button id="loginBtn">Login</button>
 
+  
   <p id="message" class="message"></p>
 
-  <button id="runTests">Run All Tests</button>
-  <button id="clearForm">Clear Form</button>
 
-  <script src="exercise1.js"></script>
+  <div class="test-controls">
+    <h3>Test Controls</h3>
+    <button id="runTests">Run All Tests</button>
+    <button id="clearForm">Clear Form</button>
+  </div>
+
+  <script src="excer_4.js"></script>
 </body>
+
 </html>
